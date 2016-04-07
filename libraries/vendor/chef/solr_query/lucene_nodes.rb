@@ -19,7 +19,7 @@
 require 'treetop'
 
 module Lucene
-  SEP ||= "__=__"
+  SEP = "__=__" unless defined?(SEP)
 
   class Term < Treetop::Runtime::SyntaxNode
     def to_array
